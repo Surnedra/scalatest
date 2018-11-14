@@ -47,7 +47,9 @@ lazy val wordCount = (project in file(".")).
       "Artima Maven Repository" at "http://repo.artima.com/releases"
     ),
 
-    credentials += Credentials(Path.userHome / ".sbt" / ".credentials" ),
+    val username = scala.sys.env("admin")
+    val password = scala.sys.env("password")
+    credentials += Credentials("Artifactory Realm", "10.65.200.207", username, password)
 
     publishTo in Global := {
       if (isSnapshot.value) {
@@ -68,9 +70,9 @@ addArtifact(artifact in (Compile, assembly), assembly)
 
 lazy val releaseRepository =
   "Artifactory Realm" at
-    "http://10.65.200.290/artifactory/scalatest/"
+    "http://10.65.200.207/artifactory/scalatest/"
 
 lazy val snapshotRepository =
   "Artifactory Realm" at
-    "http://10.65.200.290/artifactory/scalatest;build.timestamp=" + new java.util.Date().getTime
+    "http://10.65.200.207/artifactory/scalatest;build.timestamp=" + new java.util.Date().getTime
 
