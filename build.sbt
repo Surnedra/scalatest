@@ -68,9 +68,9 @@ addArtifact(artifact in (Compile, assembly), assembly)
 
 lazy val releaseRepository =
   "Artifactory Realm" at
-    "http://10.65.200.207/artifactory/scalatest/"
+    "http://10.65.200.290/artifactory/scalatest/"
 
 lazy val snapshotRepository =
   "Artifactory Realm" at
-    "http://10.65.200.207/artifactory/scalatest;build.timestamp=" + new java.util.Date().getTime
+    "http://10.65.200.290/artifactory/scalatest;build.timestamp=" + new java.util.Date().getTime
 
