@@ -8,3 +8,4 @@ publishTo <<= version { (v: String) =>
     Some(Resolver.file("Snapshots", file("http://10.65.200.207/artifactory/scalatest/snapshots/")))
   else
     Some(Resolver.file("Releases", file("http://10.65.200.207/artifactory/scalatest/releases/")))
+}
