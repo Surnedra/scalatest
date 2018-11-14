@@ -47,7 +47,7 @@ lazy val wordCount = (project in file(".")).
       "Artima Maven Repository" at "http://repo.artima.com/releases"
     ),
 
-    credentials += Credentials("Artifactory Realm", "10.65.200.207", "admin", "password")
+    credentials += Credentials("Artifactory Realm", "10.65.200.207", "admin", "password"),
 
     publishTo in Global := {
       if (isSnapshot.value) {
