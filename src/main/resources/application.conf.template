@@ -1,0 +1,8 @@
+cos {
+  accessKey=""
+  bucketSource=""
+  bucketDest=""
+  endpoint=""
+  secretKey=""
+  serviceId=""
+}
