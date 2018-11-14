@@ -47,9 +47,7 @@ lazy val wordCount = (project in file(".")).
       "Artima Maven Repository" at "http://repo.artima.com/releases"
     ),
 
-    val username = scala.sys.env("admin")
-    val password = scala.sys.env("password")
-    credentials += Credentials("Artifactory Realm", "10.65.200.207", username, password)
+    credentials += Credentials("Artifactory Realm", "10.65.200.207", "admin", "password")
 
     publishTo in Global := {
       if (isSnapshot.value) {
