@@ -5,4 +5,5 @@ cos {
   endpoint=""
   secretKey=""
   serviceId=""
+  serviceId=""
 }
