@@ -1,5 +1,6 @@
 import sbt.Credentials
 import sbt.Keys.{credentials, publishTo}
+import surnedrs
 
 lazy val commonSettings = Seq(
   fork := true,
